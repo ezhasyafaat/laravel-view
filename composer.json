@@ -4,7 +4,7 @@
     "type": "package",
     "license": "MIT",
     "keywords": [
-        "laravel,laravel-view,laravel-view-package"
+        "laravel view generator"
     ],
     "authors": [
         {
