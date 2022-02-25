@@ -4,6 +4,10 @@
 [![Travis](https://img.shields.io/travis/ezhasyafaat/laravel-view.svg?style=flat-square)]()
 [![Total Downloads](https://img.shields.io/packagist/dt/ezhasyafaat/laravel-view.svg?style=flat-square)](https://packagist.org/packages/ezhasyafaat/laravel-view)
 
+<p align="center">
+    <img src="asset.png" alt="img-laravel-view">
+</p>
+
 ## Install
 `composer require ezhasyafaat/laravel-view`
 
@@ -66,3 +70,7 @@ If you discover any security-related issues, please email muhammadezhasyafaat08@
 
 ## License
 The MIT License (MIT). Please see [License File](/LICENSE.md) for more information.
+
+## Find me on :
+Instagram : zhaasyft
+Twitter   : zhaasyft
