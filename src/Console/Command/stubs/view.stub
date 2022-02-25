@@ -1,0 +1,5 @@
+@extends(config('laravel-view.extends'))
+
+@section(config('laravel-view.section.content'))
+
+@endsection
