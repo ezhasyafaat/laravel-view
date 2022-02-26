@@ -12,7 +12,7 @@ class ViewMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'make:view {name}';
+    protected $signature = 'make:view {name} {--resource}';
 
     /**
      * The console command description.
@@ -45,15 +45,40 @@ class ViewMakeCommand extends GeneratorCommand
      */
     public function handle()
     {
-        $dirr   = resource_path('views' . DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $this->argument('name')).'.blade.php');
+        if($this->option('resource')) {
+            /** Create a default resource view */
+            $resources = [
+                'index',
+                'create',
+                'edit',
+                'show'
+            ];
 
-        $baseView = $this->files->get($this->getStub());
-        $directory = dirname($dirr);
-        (new Filesystem)->ensureDirectoryExists($directory);
+            foreach($resources as $resource) {
+                $dirr   = resource_path('views' . DIRECTORY_SEPARATOR . $this->argument('name') . DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $resource).'.blade.php');
 
-        (new Filesystem)->put($dirr, $baseView);
+                $baseView = $this->files->get($this->getStub());
 
-        $this->info('Success Create View');
-        
+                $directory = dirname($dirr);
+
+                (new Filesystem)->ensureDirectoryExists($directory);
+
+                (new Filesystem)->put($dirr, $baseView);
+
+                $this->info('Success Create View '.$this->argument('name').'/'.$resource.'.blade.php');
+            }
+        } else {
+            $dirr   = resource_path('views' . DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $this->argument('name')).'.blade.php');
+
+            $baseView = $this->files->get($this->getStub());
+            
+            $directory = dirname($dirr);
+
+            (new Filesystem)->ensureDirectoryExists($directory);
+
+            (new Filesystem)->put($dirr, $baseView);
+
+            $this->info('Success Create View');
+        }
     }
 }

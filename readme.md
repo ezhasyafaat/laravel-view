@@ -47,6 +47,18 @@ $ php artisan make:view Product/index
 
 `this command will be generate file index.blade.php in folder resources/view/Product`
 
+```bash
+$ php artisan make:view Product --resource
+```
+
+
+`this command will be generate a resource view`
+- Product/index.blade.php
+- Product/create.blade.php
+- Product/show.blade.php
+- Product/edit.blade.php
+
+
 ## Testing
 Run the tests with:
 
