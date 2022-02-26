@@ -84,5 +84,5 @@ If you discover any security-related issues, please email muhammadezhasyafaat08@
 The MIT License (MIT). Please see [License File](/LICENSE.md) for more information.
 
 ## Find me on :
-Instagram : zhaasyft
-Twitter   : zhaasyft
+- Instagram : zhaasyft
+- Twitter   : zhaasyft
