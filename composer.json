@@ -26,7 +26,8 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit"
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/php-cs-fixer fix --config=.php_cs.dist.php --allow-risky=yes"
     },
     "extra": {
         "laravel": {
@@ -36,6 +37,7 @@
         }
     },
     "require-dev": {
-        "orchestra/testbench": "^6.0"
+        "orchestra/testbench": "^6.0",
+        "friendsofphp/php-cs-fixer": "^3.0"
     }
 }

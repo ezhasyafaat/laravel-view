@@ -2,12 +2,11 @@
 
 namespace Ezhasyafaat\LaravelView;
 
-use Illuminate\Support\ServiceProvider;
 use Ezhasyafaat\LaravelView\Console\Command\ViewMakeCommand;
+use Illuminate\Support\ServiceProvider;
 
 class LaravelViewServiceProvider extends ServiceProvider
 {
-
     public const CONFIG_PATH = __DIR__ . '/../config/laravel-view.php';
     /**
      * Bootstrap services.
@@ -20,7 +19,7 @@ class LaravelViewServiceProvider extends ServiceProvider
             self::CONFIG_PATH => config_path('laravel-view.php'),
         ], 'config');
 
-        if($this->app->runningInConsole()) {
+        if ($this->app->runningInConsole()) {
             $this->commands([
                 ViewMakeCommand::class,
             ]);
