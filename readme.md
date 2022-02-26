@@ -5,7 +5,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/ezhasyafaat/laravel-view.svg?style=flat-square)](https://packagist.org/packages/ezhasyafaat/laravel-view)
 
 <p align="center">
-    <img src="asset.png" alt="img-laravel-view">
+    <img src="laravel-view.png" height="450" width="800" alt="img-laravel-view">
 </p>
 
 ## Install
