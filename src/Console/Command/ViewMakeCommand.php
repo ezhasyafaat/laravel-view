@@ -55,7 +55,7 @@ class ViewMakeCommand extends GeneratorCommand
             ];
 
             foreach ($resources as $resource) {
-                $dirr = resource_path('views' . DIRECTORY_SEPARATOR . $this->argument('name') . DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $resource) . '.blade.php');
+                $dirr = resource_path('views' . DIRECTORY_SEPARATOR . strtolower($this->argument('name')) . DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $resource) . '.blade.php');
 
                 $baseView = $this->files->get($this->getStub());
 
@@ -65,7 +65,7 @@ class ViewMakeCommand extends GeneratorCommand
 
                 (new Filesystem())->put($dirr, $baseView);
 
-                $this->info('Success Create View ' . $this->argument('name') . '/' . $resource . '.blade.php');
+                $this->info('Success Create View ' . strtolower($this->argument('name')) . '/' . $resource . '.blade.php');
             }
         } else {
             $dirr = resource_path('views' . DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $this->argument('name')) . '.blade.php');
