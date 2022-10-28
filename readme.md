@@ -39,20 +39,20 @@ return [
 $ php artisan make:view index
 ```
 
-`this command will be generate file index.blade.php in folder resources/view`
+`this command will be generate file index.blade.php in folder resources/views`
 
 ```bash
 $ php artisan make:view Product/index
 ```
 
-`this command will be generate file index.blade.php in folder resources/view/Product`
+`this command will be generate file index.blade.php in folder resources/views/Product`
 
 ```bash
 $ php artisan make:view Product --resource
 ```
 
 
-`this command will be generate a resource view`
+`this command will be generate a resource views`
 - Product/index.blade.php
 - Product/create.blade.php
 - Product/show.blade.php
