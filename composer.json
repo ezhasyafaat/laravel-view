@@ -26,6 +26,7 @@
         }
     },
     "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/phpunit",
         "format": "vendor/bin/php-cs-fixer fix --config=.php_cs.dist.php --allow-risky=yes"
     },
@@ -38,6 +39,7 @@
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
-        "friendsofphp/php-cs-fixer": "^3.0"
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.9"
     }
 }
